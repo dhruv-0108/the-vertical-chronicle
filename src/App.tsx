@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import CV from "./pages/CV";
 import NotFound from "./pages/NotFound";
 import MotofixCaseStudy from "./pages/MotofixCaseStudy";
+import MotofixDemo from "./pages/MotofixDemo";
 import AquaSonicCaseStudy from "./pages/AquaSonicCaseStudy";
 import CreatorMatchCaseStudy from "./pages/CreatorMatchCaseStudy";
 import useSmoothScroll from "./hooks/useSmoothScroll";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/cv" element={<CV />} />
             <Route path="/motofix-case-study" element={<MotofixCaseStudy />} />
+            <Route path="/motofix-demo" element={<MotofixDemo />} />
             <Route path="/aquasonic-case-study" element={<AquaSonicCaseStudy />} />
             <Route path="/creatormatch-case-study" element={<CreatorMatchCaseStudy />} />
             
