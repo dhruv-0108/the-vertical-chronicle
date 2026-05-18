@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Resume Light Theme — cream + dark navy */
+    --background: 40 33% 96%;        /* cream */
+    --foreground: 220 40% 14%;       /* dark navy */
+
+    --card: 40 30% 99%;
+    --card-foreground: 220 40% 14%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 220 40% 14%;
+
+    /* Dark navy primary */
+    --primary: 220 50% 18%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 220 40% 14%;
+    --secondary-foreground: 40 33% 96%;
+
+    /* Subtle accent: muted gold */
+    --accent: 32 70% 45%;
+    --accent-foreground: 40 33% 96%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 220 15% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 82%;
+    --input: 220 15% 82%;
+    --ring: 220 50% 18%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 50% 18%), hsl(220 40% 28%));
+    --gradient-secondary: linear-gradient(135deg, hsl(40 33% 96%), hsl(40 25% 90%));
+    --gradient-dark: linear-gradient(180deg, hsl(40 33% 96%), hsl(40 30% 92%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(32 70% 45% / 0.15), transparent 60%);
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(220 50% 18% / 0.08), transparent);
+
+    /* Premium Shadows */
+    --shadow-glow-primary: 0 0 80px hsl(12 100% 55% / 0.4);
+    --shadow-glow-accent: 0 0 60px hsl(38 100% 50% / 0.3);
+    --shadow-intense: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+
+    /* Sidebar defaults */
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 12 100% 55%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 12 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scrolling */
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.4);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-secondary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-secondary);
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--shadow-glow-accent);
+  }
+
+  /* Legacy alias */
+  .glow-cyan {
+    box-shadow: var(--shadow-glow-primary);
+  }
+
+  .glow-orange {
+    box-shadow: var(--shadow-glow-accent);
+  }
+
+  .glass {
+    @apply bg-card/80 backdrop-blur-2xl border border-border/30;
+  }
+
+  .glass-premium {
+    @apply bg-card/60 backdrop-blur-3xl border border-border/20;
+    box-shadow: inset 0 1px 0 0 hsl(0 0% 100% / 0.05);
+  }
+
+  .section-container {
+    @apply min-h-screen flex items-center justify-center px-6 py-32 relative overflow-hidden;
+  }
+
+  .timeline-dot {
+    @apply w-4 h-4 rounded-full bg-primary relative;
+    box-shadow: 0 0 30px hsl(var(--primary)), 0 0 60px hsl(var(--primary) / 0.5);
+  }
+
+  .timeline-dot::before {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-primary;
+    animation: ping-slow 2s ease-out infinite;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px -15px hsl(var(--primary) / 0.2);
+  }
+
+  /* Premium Button Styles */
+  .btn-premium {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.1), transparent);
+    transform: translateX(-100%);
+  }
+
+  .btn-premium:hover::before {
+    opacity: 1;
+    animation: shimmer 0.6s ease-out;
+  }
+
+  /* Ambient Text */
+  .ambient-text {
+    @apply absolute font-space font-bold text-foreground/[0.03] select-none pointer-events-none;
+    font-size: clamp(6rem, 20vw, 20rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+  }
+
+  /* Abstract Shape */
+  .abstract-shape {
+    @apply absolute rounded-full pointer-events-none;
+    filter: blur(80px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(2deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scroll-hint {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  75%, 100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scroll-hint-arrow {
+  animation: scroll-hint 2s ease-in-out infinite;
+}
