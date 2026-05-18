@@ -131,6 +131,7 @@ const Index = () => {
             title="Creator Match"
             subtitle="Brand Collaboration Platform"
             link="/creatormatch-case-study"
+            prototypeLink="https://creatormatch-wireframe.vercel.app/"
             why="Brands struggle to find authentic micro-influencers."
             what="A platform connecting creators with targeted brand deals."
             how="Data-driven matching and user-centric UI design."
@@ -139,6 +140,7 @@ const Index = () => {
             title="AquaSonic"
             subtitle="Sonic water experience"
             link="/aquasonic-case-study"
+            prototypeLink="https://aquasonic-urascape-website.vercel.app/"
             why="Users lack engaging, multi-sensory experiences."
             what="An immersive web application exploring sound and water."
             how="UX research-driven design and interactive prototyping."
@@ -188,9 +190,15 @@ const ProjectRow = ({ title, subtitle, link, prototypeLink, why, what, how }: an
             Case Study <ArrowUpRight className="w-4 h-4" />
           </Link>
           {prototypeLink && (
-            <Link to={prototypeLink} onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-black text-white border-[3px] border-black text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-transparent hover:text-black group-hover/row:bg-[#D1D1CB] group-hover/row:text-black group-hover/row:border-[#D1D1CB] group-hover/row:hover:bg-transparent group-hover/row:hover:text-[#D1D1CB] transition-all duration-300">
-              Prototype <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            prototypeLink.startsWith('http') ? (
+              <a href={prototypeLink} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-black text-white border-[3px] border-black text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-transparent hover:text-black group-hover/row:bg-[#D1D1CB] group-hover/row:text-black group-hover/row:border-[#D1D1CB] group-hover/row:hover:bg-transparent group-hover/row:hover:text-[#D1D1CB] transition-all duration-300">
+                Prototype <ArrowUpRight className="w-4 h-4" />
+              </a>
+            ) : (
+              <Link to={prototypeLink} onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-black text-white border-[3px] border-black text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-transparent hover:text-black group-hover/row:bg-[#D1D1CB] group-hover/row:text-black group-hover/row:border-[#D1D1CB] group-hover/row:hover:bg-transparent group-hover/row:hover:text-[#D1D1CB] transition-all duration-300">
+                Prototype <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            )
           )}
         </div>
       </div>
