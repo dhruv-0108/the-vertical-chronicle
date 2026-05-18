@@ -149,7 +149,7 @@ const Index = () => {
             title="Motofix DIY"
             subtitle="Bike maintenance, simplified"
             link="/motofix-case-study"
-            prototypeLink="/motofix-demo"
+            prototypeLink="https://motofix-psi.vercel.app/"
             why="Bike maintenance is overly technical for beginners."
             what="A mobile layout simplifying DIY repairs step-by-step."
             how="System design thinking and clear user journeys."

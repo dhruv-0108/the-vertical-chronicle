@@ -19,12 +19,14 @@ const slides = [
             </span>
           ))}
         </div>
-        <Link 
-          to="/motofix-demo" 
+        <a 
+          href="https://motofix-psi.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors mb-12 text-sm font-medium shadow-sm"
         >
           View Interactive Prototype <Rocket className="w-4 h-4" />
-        </Link>
+        </a>
         <p className="text-sm text-gray-400">Case Study • Dhruv Varachhiya</p>
       </div>
     ),

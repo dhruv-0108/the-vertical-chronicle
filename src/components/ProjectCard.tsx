@@ -39,7 +39,7 @@ const projects: Project[] = [
     icon: <Bike className="w-10 h-10" />,
     status: "completed",
     caseStudyLink: "/motofix-case-study",
-    // No landing page yet
+    landingPageLink: "https://motofix-psi.vercel.app/",
   },
   {
     id: "future",

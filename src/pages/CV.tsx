@@ -215,6 +215,7 @@ const CV = () => {
                   title="Motofix DIY"
                   subtitle="Bike maintenance, simplified"
                   caseStudy="/motofix-case-study"
+                  live="https://motofix-psi.vercel.app/"
                 />
                 <ProjectTile
                   icon={<Users className="w-4 h-4" />}
