@@ -147,6 +147,7 @@ const Index = () => {
             title="Motofix DIY"
             subtitle="Bike maintenance, simplified"
             link="/motofix-case-study"
+            prototypeLink="/motofix-demo"
             why="Bike maintenance is overly technical for beginners."
             what="A mobile layout simplifying DIY repairs step-by-step."
             how="System design thinking and clear user journeys."
@@ -172,29 +173,36 @@ const Index = () => {
   );
 };
 
-const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => (
-  <Link to={link} className="block border-b-[3px] border-black w-full px-6 md:px-12 group/row hover:bg-black transition-all duration-500 relative overflow-hidden group-hover/list:opacity-30 hover:!opacity-100 flex flex-col items-center">
+const ProjectRow = ({ title, subtitle, link, prototypeLink, why, what, how }: any) => (
+  <div className="block border-b-[3px] border-black w-full px-6 md:px-12 group/row hover:bg-black transition-all duration-500 relative overflow-hidden group-hover/list:opacity-30 hover:!opacity-100 flex flex-col items-center">
     <div className="py-12 md:py-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mix-blend-color-burn group-hover/row:mix-blend-normal transition-all duration-500 w-full max-w-4xl">
 
       {/* Title section */}
       <div className="flex-1 transition-transform duration-500 ease-out group-hover/row:translate-x-4">
         <h3 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter mb-2 leading-tight text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">{title}</h3>
-        <p className="text-lg md:text-xl font-bold text-black/70 group-hover/row:text-[#D1D1CB]/70 transition-colors duration-500">{subtitle}</p>
+        <p className="text-lg md:text-xl font-bold text-black/70 group-hover/row:text-[#D1D1CB]/70 transition-colors duration-500 mb-6">{subtitle}</p>
+        
+        {/* Action Links */}
+        <div className="flex flex-wrap gap-4 mt-8 transition-transform duration-500 delay-[50ms] group-hover/row:translate-x-2">
+          <Link to={link} onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 border-[3px] border-black text-black text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white group-hover/row:border-[#D1D1CB] group-hover/row:text-[#D1D1CB] group-hover/row:hover:bg-[#D1D1CB] group-hover/row:hover:text-black transition-all duration-300">
+            Case Study <ArrowUpRight className="w-4 h-4" />
+          </Link>
+          {prototypeLink && (
+            <Link to={prototypeLink} onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-black text-white border-[3px] border-black text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-transparent hover:text-black group-hover/row:bg-[#D1D1CB] group-hover/row:text-black group-hover/row:border-[#D1D1CB] group-hover/row:hover:bg-transparent group-hover/row:hover:text-[#D1D1CB] transition-all duration-300">
+              Prototype <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          )}
+        </div>
       </div>
 
       {/* Why, What, How Section */}
       <div className="flex-1 max-w-lg lg:ml-auto text-base md:text-lg font-medium space-y-4 text-black/80 group-hover/row:text-[#D1D1CB]/80 transition-colors duration-500">
-        <p className="transition-transform duration-500 delay-[50ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">Why:</strong>{why}</p>
-        <p className="transition-transform duration-500 delay-[100ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">What:</strong>{what}</p>
-        <p className="transition-transform duration-500 delay-[150ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">How:</strong>{how}</p>
-      </div>
-
-      {/* Arrow */}
-      <div className="hidden lg:flex items-center justify-center w-16 h-16 rounded-full border-[3px] border-black group-hover/row:border-[#D1D1CB] group-hover/row:bg-[#D1D1CB] group-hover/row:text-black group-hover/row:scale-[1.15] group-hover/row:rotate-45 transition-all duration-500 ease-out">
-        <ArrowUpRight className="w-8 h-8" />
+        <p className="transition-transform duration-500 delay-[100ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">Why:</strong>{why}</p>
+        <p className="transition-transform duration-500 delay-[150ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">What:</strong>{what}</p>
+        <p className="transition-transform duration-500 delay-[200ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">How:</strong>{how}</p>
       </div>
     </div>
-  </Link>
+  </div>
 );
 
 export default Index;
