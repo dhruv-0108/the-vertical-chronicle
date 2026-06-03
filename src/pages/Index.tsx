@@ -18,23 +18,25 @@ const Index = () => {
       <InteractiveGradient />
 
       {/* Navbar */}
-      <nav className="p-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0 text-sm font-bold tracking-tight border-b-[3px] border-black">
-        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 lg:gap-12 w-full md:w-auto">
-          <div className="flex justify-between items-center w-full md:w-auto">
-            <Link to="/" className="hover:opacity-60 transition font-black text-lg tracking-widest">Dhruv</Link>
-            {/* CV link for mobile on top right */}
-            <Link to="/cv" className="hover:opacity-60 transition md:hidden font-bold">CV</Link>
+      <nav className="px-6 md:px-12 border-b-[3px] border-black">
+        <div className="mx-auto w-full max-w-4xl py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0 text-sm font-bold tracking-tight">
+          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 lg:gap-12 w-full md:w-auto">
+            <div className="flex justify-between items-center w-full md:w-auto">
+              <Link to="/" className="hover:opacity-60 transition font-black text-lg tracking-widest">Dhruv</Link>
+              {/* CV link for mobile on top right */}
+              <Link to="/cv" className="hover:opacity-60 transition md:hidden font-bold">CV</Link>
+            </div>
+            <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-bold">
+              <Link to="/case-studies" className="hover:opacity-60 transition">Case Studies</Link>
+              <Link to="/product-teardowns" className="hover:opacity-60 transition">Product Teardowns</Link>
+              <Link to="/learning" className="hover:opacity-60 transition">Learning</Link>
+              <Link to="/photography" className="hover:opacity-60 transition">Photography</Link>
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-bold">
-            <Link to="/case-studies" className="hover:opacity-60 transition">Case Studies</Link>
-            <Link to="/product-teardowns" className="hover:opacity-60 transition">Product Teardowns</Link>
-            <Link to="/learning" className="hover:opacity-60 transition">Learning</Link>
-            <Link to="/photography" className="hover:opacity-60 transition">Photography</Link>
+          <div className="hidden md:flex gap-6 lg:gap-8 items-center font-bold">
+            <Link to="/" className="hover:opacity-60 transition">Work</Link>
+            <Link to="/cv" className="hover:opacity-60 transition">CV</Link>
           </div>
-        </div>
-        <div className="hidden md:flex gap-6 lg:gap-8 items-center font-bold">
-          <Link to="/" className="hover:opacity-60 transition">Work</Link>
-          <Link to="/cv" className="hover:opacity-60 transition">CV</Link>
         </div>
       </nav>
 
