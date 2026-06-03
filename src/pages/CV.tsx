@@ -151,7 +151,7 @@ const CV = () => {
               <ol className="space-y-3">
                 <ExpItem
                   role="Business Analyst"
-                  org="SSM Infotech Solutions Pvt. Ltd."
+                  org="SSMInfotech Solutions Pvt. Ltd."
                   period="Jan 2026 — Present"
                   points={[
                     "Driving requirement analysis and process alignment for MES implementations across 2 manufacturing industries.",

@@ -21,7 +21,7 @@ exp_old = '''      {/* Professional Experience Timeline */}
               {
                 period: "Jan 2026 - Present",
                 role: "Business Analyst",
-                company: "SSSM InfoTech Solutions Pvt. Ltd.",
+                company: "SSMInfotech Solutions Pvt. Ltd.",
                 desc: "Driving requirement analysis and process alignment for MES implementations. Leading documentation of API configuration workflows for SAP integration."
               },
               {
@@ -66,7 +66,7 @@ exp_new = '''      {/* Professional Experience Timeline */}
               {
                 period: "Jan 2026 - Present",
                 role: "Business Analyst",
-                company: "SSSM InfoTech Solutions Pvt. Ltd.",
+                company: "SSMInfotech Solutions Pvt. Ltd.",
                 desc: "Driving requirement analysis and process alignment for MES implementations. Leading documentation of API configuration workflows for SAP integration."
               },
               {

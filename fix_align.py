@@ -27,7 +27,7 @@ array_old = '''            {[
               {
                 period: "Jan 2026 - Present",
                 role: "Business Analyst",
-                company: "SSSM InfoTech Solutions Pvt. Ltd.",
+                company: "SSMInfotech Solutions Pvt. Ltd.",
                 desc: "Driving requirement analysis and process alignment for MES implementations. Leading documentation of API configuration workflows for SAP integration."
               },
               {
@@ -60,7 +60,7 @@ array_new = '''            {[
               {
                 period: "Jan 2026 - Present",
                 role: "Business Analyst",
-                company: "SSSM InfoTech Solutions Pvt. Ltd.",
+                company: "SSMInfotech Solutions Pvt. Ltd.",
                 desc: "Driving requirement analysis and process alignment for MES implementations. Leading documentation of API configuration workflows for SAP integration."
               }
             ].map((exp, idx, arr) => ('''
