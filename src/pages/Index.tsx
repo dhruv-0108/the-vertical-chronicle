@@ -59,7 +59,7 @@ const Index = () => {
 
         <div className="space-y-3 text-lg md:text-xl font-bold text-black/80 tracking-tight mix-blend-color-burn w-full max-w-4xl text-left">
           <p><strong className="text-black font-black tracking-wider text-xs md:text-sm mr-3">Currently →</strong> Business Analyst @ SSMInfotech</p>
-          <p><strong className="text-black font-black tracking-wider text-xs md:text-sm mr-3">Previously →</strong> PalmInfotech • Yash Metals</p>
+          <p><strong className="text-black font-black tracking-wider text-xs md:text-sm mr-3">Previously →</strong> PalmInfotech ← Yash Metals</p>
           <p><strong className="text-black font-black tracking-wider text-xs md:text-sm mr-3">Delivering →</strong> Seamless Operations ☻</p>
         </div>
       </header>
