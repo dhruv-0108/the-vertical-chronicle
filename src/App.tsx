@@ -10,6 +10,7 @@ import MotofixCaseStudy from "./pages/MotofixCaseStudy";
 import MotofixDemo from "./pages/MotofixDemo";
 import AquaSonicCaseStudy from "./pages/AquaSonicCaseStudy";
 import CreatorMatchCaseStudy from "./pages/CreatorMatchCaseStudy";
+import ComingSoon from "./pages/ComingSoon";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 
 const queryClient = new QueryClient();
@@ -35,10 +36,10 @@ const App = () => (
             <Route path="/creatormatch-case-study" element={<CreatorMatchCaseStudy />} />
             
             {/* Placeholder routes for new sections */}
-            <Route path="/case-studies" element={<NotFound />} />
-            <Route path="/product-teardowns" element={<NotFound />} />
-            <Route path="/learning" element={<NotFound />} />
-            <Route path="/photography" element={<NotFound />} />
+            <Route path="/case-studies" element={<ComingSoon />} />
+            <Route path="/product-teardowns" element={<ComingSoon />} />
+            <Route path="/learning" element={<ComingSoon />} />
+            <Route path="/photography" element={<ComingSoon />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
