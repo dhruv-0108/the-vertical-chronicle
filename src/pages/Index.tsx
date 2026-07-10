@@ -132,8 +132,7 @@ const Index = () => {
           <ProjectRow
             title="Creator Match"
             subtitle="Brand Collaboration Platform"
-            link="/creatormatch-case-study"
-            prototypeLink="https://creatormatch-wireframe.vercel.app/"
+            link="https://creatormatch-wireframe.vercel.app/"
             why="Brands struggle to find authentic micro-influencers."
             what="A platform connecting creators with targeted brand deals."
             how="Data-driven matching and user-centric UI design."
@@ -141,8 +140,7 @@ const Index = () => {
           <ProjectRow
             title="AquaSonic"
             subtitle="Sonic water experience"
-            link="/aquasonic-case-study"
-            prototypeLink="https://aquasonic-urascape-website.vercel.app/"
+            link="https://aquasonic-urascape-website.vercel.app/"
             why="Users lack engaging, multi-sensory experiences."
             what="An immersive web application exploring sound and water."
             how="UX research-driven design and interactive prototyping."
@@ -150,8 +148,7 @@ const Index = () => {
           <ProjectRow
             title="Motofix DIY"
             subtitle="Bike maintenance, simplified"
-            link="/motofix-case-study"
-            prototypeLink="https://motofix-psi.vercel.app/"
+            link="https://motofix-psi.vercel.app/"
             why="Bike maintenance is overly technical for beginners."
             what="A mobile layout simplifying DIY repairs step-by-step."
             how="System design thinking and clear user journeys."
