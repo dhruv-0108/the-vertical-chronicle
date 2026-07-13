@@ -341,7 +341,7 @@ const CreatorMatchCaseStudy = () => {
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm text-gray-400 font-medium tracking-wide">Slide {index + 1} of 6</span>
               </div>
-              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 min-h-[500px]">
+              <div className="bg-white rounded-3xl p-5 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 min-h-[500px]">
                 {slide.content}
               </div>
             </div>

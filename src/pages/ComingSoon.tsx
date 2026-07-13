@@ -24,7 +24,7 @@ const ComingSoon = () => {
       <InteractiveGradient />
 
       {/* Main Container */}
-      <div className="w-full max-w-lg p-8 md:p-12 border-[3px] border-black bg-[#D1D1CB]/40 backdrop-blur-md text-left mix-blend-color-burn z-10">
+      <div className="w-full max-w-lg p-6 md:p-12 border-[3px] border-black bg-[#D1D1CB]/40 backdrop-blur-md text-left mix-blend-color-burn z-10">
         <span className="text-black/40 font-bold text-xs uppercase tracking-widest mb-4 block">
           ✦ Section Under Construction
         </span>

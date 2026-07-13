@@ -205,7 +205,7 @@ const slides = [
           <Target className="w-8 h-8 text-blue-600" />
           <h2 className="text-3xl font-bold text-gray-900">Problem Statement</h2>
         </div>
-        <div className="bg-gray-50 rounded-2xl p-8 mb-8 border border-gray-200">
+        <div className="bg-gray-50 rounded-2xl p-6 md:p-8 mb-8 border border-gray-200">
           <p className="text-xl text-gray-800 leading-relaxed">
             <strong className="text-blue-600">Bike owners</strong> struggle to understand their vehicle's maintenance needs because information is either <strong className="text-red-600">too technical</strong> (manuals), <strong className="text-red-600">too scattered</strong> (YouTube), or <strong className="text-red-600">not trustworthy</strong> (mechanics with vested interests).
           </p>
@@ -577,7 +577,7 @@ const MotofixCaseStudy = () => {
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm text-gray-400">Slide {index + 1} of 10</span>
               </div>
-              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 min-h-[500px]">
+              <div className="bg-white rounded-2xl p-5 md:p-12 shadow-sm border border-gray-100 min-h-[500px]">
                 {slide.content}
               </div>
             </div>

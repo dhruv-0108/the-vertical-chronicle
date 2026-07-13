@@ -101,7 +101,7 @@ const Index = () => {
               <div key={idx} className="flex-1 relative pl-10 md:pl-0 md:pt-16 group">
                 {/* Mobile vertical line for each item (except last) */}
                 {idx !== arr.length - 1 && (
-                  <div className="absolute left-[9px] top-2 bottom-[-4rem] w-[3px] bg-black/30 md:hidden z-0"></div>
+                  <div className="absolute left-[9px] top-2 bottom-[-3rem] w-[3px] bg-black/30 md:hidden z-0"></div>
                 )}
 
                 {/* Node */}
@@ -109,8 +109,8 @@ const Index = () => {
 
                 <div className="mix-blend-color-burn pt-1 md:pt-0">
                   <p className="text-xs md:text-sm font-semibold tracking-widest mb-2 text-black/50">{exp.period}</p>
-                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold tracking-tighter mb-1 leading-tight whitespace-nowrap">{exp.role}</h3>
-                  <h4 className="text-sm md:text-base font-semibold text-black/70 mb-3 whitespace-nowrap truncate">{exp.company}</h4>
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold tracking-tighter mb-1 leading-tight whitespace-normal">{exp.role}</h3>
+                  <h4 className="text-sm md:text-base font-semibold text-black/70 mb-3 whitespace-normal">{exp.company}</h4>
                   <p className="text-sm md:text-base font-normal text-black/60 leading-relaxed max-w-sm">{exp.desc}</p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => {
 
   return (
     <Component {...props as any} className="block border-b-[3px] border-black w-full px-6 md:px-12 group/row hover:bg-black transition-all duration-500 relative overflow-hidden group-hover/list:opacity-30 hover:!opacity-100 flex flex-col items-center">
-      <div className="py-12 md:py-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mix-blend-color-burn group-hover/row:mix-blend-normal transition-all duration-500 w-full max-w-4xl">
+      <div className="py-8 md:py-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-12 mix-blend-color-burn group-hover/row:mix-blend-normal transition-all duration-500 w-full max-w-4xl">
 
         {/* Title section */}
         <div className="flex-1 transition-transform duration-500 ease-out group-hover/row:translate-x-4">

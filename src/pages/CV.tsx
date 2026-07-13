@@ -22,11 +22,11 @@ const CV = () => {
   return (
     <main className="relative min-h-screen w-full text-black font-sans p-3 md:p-5 lg:p-6 overflow-hidden selection:bg-black selection:text-white">
       <InteractiveGradient />
-      <nav className="fixed top-4 right-4 z-50 bg-white/50 backdrop-blur-md border-2 border-black px-4 py-2 shadow-sm flex gap-4 text-sm font-medium uppercase tracking-widest">
+      <nav className="fixed top-4 right-4 left-4 md:left-auto md:right-4 z-50 bg-white/80 backdrop-blur-md border-2 border-black px-4 py-2 shadow-sm flex justify-between md:justify-start gap-4 text-sm font-medium uppercase tracking-widest">
         <Link to="/" className="text-gray-500 hover:text-black transition">Portfolio</Link>
         <span className="text-black">CV</span>
       </nav>
-      <div className="relative z-10 mx-auto w-full max-w-[1920px] 2xl:max-w-[96vw] min-h-[calc(100vh-1.5rem)] flex flex-col lg:grid lg:grid-cols-12 gap-3 md:gap-4 mt-8 md:mt-0">
+      <div className="relative z-10 mx-auto w-full max-w-[1920px] 2xl:max-w-[96vw] min-h-[calc(100vh-1.5rem)] flex flex-col lg:grid lg:grid-cols-12 gap-3 md:gap-4 mt-20 lg:mt-0">
         {/* LEFT SIDEBAR */}
         <aside className="lg:col-span-4 xl:col-span-3 2xl:col-span-2 bg-white/70 backdrop-blur-xl border-2 border-black p-5 flex flex-col gap-5 h-fit lg:sticky lg:top-6">
           {/* Header */}

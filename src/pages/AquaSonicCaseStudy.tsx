@@ -75,7 +75,7 @@ const AquaSonicCaseStudy = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="bg-blue-600 text-white p-8 rounded-2xl">
+                <div className="bg-blue-600 text-white p-6 md:p-8 rounded-2xl w-full">
                   <h3 className="font-bold text-xl mb-4">Impact</h3>
                   <p className="text-blue-100 text-lg leading-relaxed">
                     Rising mental stress → declining focus → lack of emotional stability → demand for simple wellness solutions.
@@ -158,7 +158,7 @@ const AquaSonicCaseStudy = () => {
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Persona 1 */}
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
                   <Brain className="w-8 h-8 text-blue-600" />
                 </div>
@@ -180,7 +180,7 @@ const AquaSonicCaseStudy = () => {
               </div>
               
               {/* Persona 2 */}
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
                 <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
                   <Zap className="w-8 h-8 text-purple-600" />
                 </div>
