@@ -230,6 +230,7 @@ const CV = () => {
                   title="Kasht Nivaran"
                   subtitle="Temple Digital Presence"
                   caseStudy="/kasht-nivaran-case-study"
+                  live="https://kasht-nivaran.vercel.app/"
                 />
               </div>
             </Card>

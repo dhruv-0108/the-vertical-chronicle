@@ -164,7 +164,7 @@ const Index = () => {
           <ProjectRow
             title="Kasht Nivaran"
             subtitle="Reviving Temple's Digital Presence"
-            link="/kasht-nivaran-case-study"
+            link="https://kasht-nivaran.vercel.app/"
             why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan."
             what="A clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally."
             how="React, TypeScript, and a custom light/fast translation layer in Gujarati, Hindi, and English."
