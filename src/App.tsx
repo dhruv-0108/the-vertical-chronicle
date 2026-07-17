@@ -10,6 +10,7 @@ import MotofixCaseStudy from "./pages/MotofixCaseStudy";
 import MotofixDemo from "./pages/MotofixDemo";
 import AquaSonicCaseStudy from "./pages/AquaSonicCaseStudy";
 import CreatorMatchCaseStudy from "./pages/CreatorMatchCaseStudy";
+import KashtNivaranCaseStudy from "./pages/KashtNivaranCaseStudy";
 import ComingSoon from "./pages/ComingSoon";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/motofix-demo" element={<MotofixDemo />} />
             <Route path="/aquasonic-case-study" element={<AquaSonicCaseStudy />} />
             <Route path="/creatormatch-case-study" element={<CreatorMatchCaseStudy />} />
+            <Route path="/kasht-nivaran-case-study" element={<KashtNivaranCaseStudy />} />
             
             {/* Placeholder routes for new sections */}
             <Route path="/case-studies" element={<ComingSoon />} />

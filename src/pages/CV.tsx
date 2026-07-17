@@ -15,6 +15,7 @@ import {
   Droplets,
   Bike,
   Users,
+  Sparkles,
 } from "lucide-react";
 import InteractiveGradient from "../components/InteractiveGradient";
 
@@ -202,7 +203,7 @@ const CV = () => {
               icon={<Rocket className="w-3.5 h-3.5" />}
               title="Projects"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <ProjectTile
                   icon={<Droplets className="w-4 h-4" />}
                   title="AquaSonic"
@@ -223,6 +224,12 @@ const CV = () => {
                   subtitle="Brand Collaboration Platform"
                   caseStudy="/creatormatch-case-study"
                   live="https://creatormatch-wireframe.vercel.app/"
+                />
+                <ProjectTile
+                  icon={<Sparkles className="w-4 h-4 text-orange-500" />}
+                  title="Kasht Nivaran"
+                  subtitle="Temple Digital Presence"
+                  caseStudy="/kasht-nivaran-case-study"
                 />
               </div>
             </Card>

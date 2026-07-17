@@ -161,6 +161,14 @@ const Index = () => {
             what="A minimalist editorial-style diary to track daily sadhana and resolve commitment vows."
             how="React, TypeScript, Tailwind CSS, and Firebase Auth + Firestore for cloud sync."
           />
+          <ProjectRow
+            title="Kasht Nivaran"
+            subtitle="Reviving Temple's Digital Presence"
+            link="/kasht-nivaran-case-study"
+            why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan."
+            what="A clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally."
+            how="React, TypeScript, and a custom light/fast translation layer in Gujarati, Hindi, and English."
+          />
         </div>
       </section>
 
