@@ -137,14 +137,7 @@ const Index = () => {
             what="A platform connecting creators with targeted brand deals."
             how="Data-driven matching and user-centric UI design."
           />
-          <ProjectRow
-            title="AquaSonic"
-            subtitle="Sonic water experience"
-            link="https://aquasonic-urascape-website.vercel.app/"
-            why="Users lack engaging, multi-sensory experiences."
-            what="An immersive web application exploring sound and water."
-            how="UX research-driven design and interactive prototyping."
-          />
+
           <ProjectRow
             title="Motofix DIY"
             subtitle="Bike maintenance, simplified"

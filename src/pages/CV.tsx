@@ -12,7 +12,6 @@ import {
   Camera,
   Rocket,
   ArrowUpRight,
-  Droplets,
   Bike,
   Users,
   Sparkles,
@@ -204,13 +203,7 @@ const CV = () => {
               title="Projects"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <ProjectTile
-                  icon={<Droplets className="w-4 h-4" />}
-                  title="AquaSonic"
-                  subtitle="Sonic water experience"
-                  caseStudy="/aquasonic-case-study"
-                  live="https://aquasonic-urascape-website.vercel.app/"
-                />
+
                 <ProjectTile
                   icon={<Bike className="w-4 h-4" />}
                   title="Motofix DIY"

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight, Droplets, Bike, Sparkles } from "lucide-react";
+import { ArrowUpRight, Bike, Sparkles } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -23,15 +23,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    id: "aquasonic",
-    title: "AquaSonic",
-    subtitle: "A Sonic Water Experience",
-    icon: <Droplets className="w-10 h-10" />,
-    status: "completed",
-    caseStudyLink: "/aquasonic-case-study",
-    landingPageLink: "https://aquasonic-urascape-website.vercel.app/",
-  },
+
   {
     id: "motofix",
     title: "Motofix DIY",
