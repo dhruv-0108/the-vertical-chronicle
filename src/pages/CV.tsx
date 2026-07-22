@@ -209,7 +209,7 @@ const CV = () => {
                   icon={<Compass className="w-4 h-4 text-purple-500" />}
                   title="Astro-Engine"
                   subtitle="Vedic Intelligence Engine"
-                  live="https://github.com/dhruv-0108/Astro-Engine"
+                  live="https://astro-engine-nine.vercel.app/"
                 />
                 <ProjectTile
                   icon={<Bike className="w-4 h-4" />}

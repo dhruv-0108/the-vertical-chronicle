@@ -29,7 +29,7 @@ const projects: Project[] = [
     subtitle: "Vedic Intelligence & Relocation Atlas",
     icon: <Compass className="w-10 h-10" />,
     status: "completed",
-    landingPageLink: "https://github.com/dhruv-0108/Astro-Engine",
+    landingPageLink: "https://astro-engine-nine.vercel.app/",
   },
   {
     id: "motofix",

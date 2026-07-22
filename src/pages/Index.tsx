@@ -149,7 +149,7 @@ const Index = () => {
           <ProjectRow
             title="Astro-Engine"
             subtitle="Vedic Intelligence & Relocation Atlas"
-            link="https://github.com/dhruv-0108/Astro-Engine"
+            link="https://astro-engine-nine.vercel.app/"
             why="Traditional astrology tools are paywalled, commercialized, or lack classical algorithmic rigor for real-world life decisions."
             what="An open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping, astro-atlas relocation flight paths, and 4-quadrant career alignment."
             how="Built on classical Parashari & Jaimini principles, Shadbala strengths, interactive vector heatmaps, and zero-monetization open access."
