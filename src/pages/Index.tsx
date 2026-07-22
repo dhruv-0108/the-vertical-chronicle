@@ -147,9 +147,17 @@ const Index = () => {
             how="System design thinking and clear user journeys."
           />
           <ProjectRow
+            title="Astro-Engine"
+            subtitle="Vedic Intelligence & Relocation Atlas"
+            link="https://github.com/dhruv-0108/Astro-Engine"
+            why="Traditional astrology tools are paywalled, commercialized, or lack classical algorithmic rigor for real-world life decisions."
+            what="An open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping, astro-atlas relocation flight paths, and 4-quadrant career alignment."
+            how="Built on classical Parashari & Jaimini principles, Shadbala strengths, interactive vector heatmaps, and zero-monetization open access."
+          />
+          <ProjectRow
             title="Sadhana Mandala"
             subtitle="Spiritual Journal & Vows Tracker"
-            link="https://journal-w7zl.vercel.app/"
+            link="https://journal-rose-phi.vercel.app/"
             why="Practitioners lack dedicated tools to track daily rituals and vow timelines."
             what="A minimalist editorial-style diary to track daily sadhana and resolve commitment vows."
             how="React, TypeScript, Tailwind CSS, and Firebase Auth + Firestore for cloud sync."

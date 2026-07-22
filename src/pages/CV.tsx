@@ -15,6 +15,7 @@ import {
   Bike,
   Users,
   Sparkles,
+  Compass,
 } from "lucide-react";
 import InteractiveGradient from "../components/InteractiveGradient";
 
@@ -204,6 +205,12 @@ const CV = () => {
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
+                <ProjectTile
+                  icon={<Compass className="w-4 h-4 text-purple-500" />}
+                  title="Astro-Engine"
+                  subtitle="Vedic Intelligence Engine"
+                  live="https://github.com/dhruv-0108/Astro-Engine"
+                />
                 <ProjectTile
                   icon={<Bike className="w-4 h-4" />}
                   title="Motofix DIY"

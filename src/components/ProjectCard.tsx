@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight, Bike, Sparkles } from "lucide-react";
+import { ArrowUpRight, Bike, Sparkles, Compass } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -23,7 +23,14 @@ interface Project {
 }
 
 const projects: Project[] = [
-
+  {
+    id: "astro-engine",
+    title: "Astro-Engine",
+    subtitle: "Vedic Intelligence & Relocation Atlas",
+    icon: <Compass className="w-10 h-10" />,
+    status: "completed",
+    landingPageLink: "https://github.com/dhruv-0108/Astro-Engine",
+  },
   {
     id: "motofix",
     title: "Motofix DIY",
