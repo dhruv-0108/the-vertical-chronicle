@@ -14,7 +14,7 @@ const Index = () => {
   useEffect(() => {
     const slideshowTimer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % 3);
-    }, 5000);
+    }, 30000);
     return () => clearInterval(slideshowTimer);
   }, []);
 
