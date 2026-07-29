@@ -17,54 +17,67 @@ const Index = () => {
     <div className="relative min-h-screen bg-transparent text-black font-sans selection:bg-black selection:text-white">
       <InteractiveGradient />
 
-      {/* Navbar */}
-      <nav className="px-6 md:px-12 border-b-[3px] border-black">
-        <div className="mx-auto w-full max-w-4xl py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0 text-sm font-semibold tracking-tight">
-          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 lg:gap-12 w-full md:w-auto">
-            <div className="flex justify-between items-center w-full md:w-auto">
-              <Link to="/" className="hover:opacity-60 transition font-bold text-lg tracking-widest">Dhruv</Link>
-              {/* CV link for mobile on top right */}
-              <Link to="/cv" className="hover:opacity-60 transition md:hidden font-semibold">CV</Link>
+      {/* Top Section with Background Image */}
+      <div className="relative min-h-screen flex flex-col overflow-hidden text-white selection:bg-white selection:text-black">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img src="/images/1.jpg" alt="Dhruv Background" className="w-full h-full object-cover grayscale" />
+          <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-black/20"></div> {/* extra darkening for readability */}
+        </div>
+
+        {/* Navbar and Hero Content wrapped in relative z-10 */}
+        <div className="relative z-10 flex flex-col flex-1">
+          {/* Navbar */}
+          <nav className="px-6 md:px-12 border-b-[3px] border-white/20">
+            <div className="mx-auto w-full max-w-4xl py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0 text-sm font-semibold tracking-tight">
+              <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 lg:gap-12 w-full md:w-auto">
+                <div className="flex justify-between items-center w-full md:w-auto">
+                  <Link to="/" className="hover:opacity-60 transition font-bold text-lg tracking-widest text-white">Dhruv</Link>
+                  {/* CV link for mobile on top right */}
+                  <Link to="/cv" className="hover:opacity-60 transition md:hidden font-semibold text-white">CV</Link>
+                </div>
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-semibold text-white/60">
+                  <Link to="/case-studies" className="hover:opacity-60 hover:text-white transition">Case Studies</Link>
+                  <Link to="/product-teardowns" className="hover:opacity-60 hover:text-white transition">Product Teardowns</Link>
+                  <Link to="/learning" className="hover:opacity-60 hover:text-white transition">Learning</Link>
+                  <Link to="/photography" className="hover:opacity-60 hover:text-white transition">Photography</Link>
+                </div>
+              </div>
+              <div className="hidden md:flex gap-6 lg:gap-8 items-center font-semibold text-white/60">
+                <Link to="/" className="hover:opacity-60 hover:text-white transition">Work</Link>
+                <Link to="/cv" className="hover:opacity-60 hover:text-white transition">CV</Link>
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-semibold text-black/60">
-              <Link to="/case-studies" className="hover:opacity-60 hover:text-black transition">Case Studies</Link>
-              <Link to="/product-teardowns" className="hover:opacity-60 hover:text-black transition">Product Teardowns</Link>
-              <Link to="/learning" className="hover:opacity-60 hover:text-black transition">Learning</Link>
-              <Link to="/photography" className="hover:opacity-60 hover:text-black transition">Photography</Link>
+          </nav>
+
+          {/* Hero */}
+          <header className="px-6 md:px-12 pt-12 pb-8 flex-1 flex flex-col justify-center items-center">
+            <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-start md:items-center text-xs md:text-sm font-medium mb-4 gap-2 tracking-wide text-white/60">
+              <div className="flex gap-2">
+                <span>Based in Surat, IN →</span>
+                <span className="text-white font-semibold">{timeString}</span>
+              </div>
+              <div className="flex gap-2">
+                <span>✦ Status →</span>
+                <span className="text-white font-semibold">Open to work</span>
+              </div>
             </div>
-          </div>
-          <div className="hidden md:flex gap-6 lg:gap-8 items-center font-semibold text-black/60">
-            <Link to="/" className="hover:opacity-60 hover:text-black transition">Work</Link>
-            <Link to="/cv" className="hover:opacity-60 hover:text-black transition">CV</Link>
-          </div>
+
+            <div className="w-full max-w-4xl border-t-[3px] border-white/20 mb-8"></div>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight mb-8 w-full max-w-4xl text-left">
+              Hi, this is Dhruv.
+            </h1>
+
+            <div className="space-y-3 text-lg md:text-xl font-medium text-white/70 tracking-tight w-full max-w-4xl text-left">
+              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Currently →</span> Business Analyst @ SSMInfotech</p>
+              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Previously →</span> PalmInfotech → Yash Metals</p>
+              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Delivering →</span> Seamless Operations ☻</p>
+            </div>
+          </header>
         </div>
-      </nav>
-
-      {/* Hero */}
-      <header className="px-6 md:px-12 pt-12 pb-8 min-h-[50vh] flex flex-col justify-center items-center">
-        <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-start md:items-center text-xs md:text-sm font-medium mb-4 mix-blend-color-burn gap-2 tracking-wide text-black/60">
-          <div className="flex gap-2">
-            <span>Based in Surat, IN →</span>
-            <span className="text-black font-semibold">{timeString}</span>
-          </div>
-          <div className="flex gap-2">
-            <span>✦ Status →</span>
-            <span className="text-black font-semibold">Open to work</span>
-          </div>
-        </div>
-
-        <div className="w-full max-w-4xl border-t-[3px] border-black mb-8 mix-blend-color-burn"></div>
-
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight mb-8 mix-blend-color-burn w-full max-w-4xl text-left">
-          Hi, this is Dhruv.
-        </h1>
-
-        <div className="space-y-3 text-lg md:text-xl font-medium text-black/70 tracking-tight mix-blend-color-burn w-full max-w-4xl text-left">
-          <p><span className="text-black/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Currently →</span> Business Analyst @ SSMInfotech</p>
-          <p><span className="text-black/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Previously →</span> PalmInfotech → Yash Metals</p>
-          <p><span className="text-black/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Delivering →</span> Seamless Operations ☻</p>
-        </div>
-      </header>
+      </div>
 
       {/* Professional Experience Timeline */}
       <section className="px-6 md:px-12">
