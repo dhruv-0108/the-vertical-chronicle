@@ -13,7 +13,7 @@ const Index = () => {
 
   useEffect(() => {
     const slideshowTimer = setInterval(() => {
-      setCurrentImage((prev) => (prev === 0 ? 1 : 0));
+      setCurrentImage((prev) => (prev + 1) % 3);
     }, 5000);
     return () => clearInterval(slideshowTimer);
   }, []);
@@ -26,8 +26,9 @@ const Index = () => {
       <div className="relative min-h-screen flex flex-col overflow-hidden text-white selection:bg-white selection:text-black">
         {/* Background Image Slideshow for Top Section */}
         <div className="absolute inset-0 z-0 bg-[#111]">
-          <img src="/images/1.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
+          <img src="/images/20260727_223746.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
           <img src="/images/2.jpg" alt="Dhruv Background 2" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`} />
+          <img src="/images/3.jpg" alt="Dhruv Background 3" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 2 ? 'opacity-100' : 'opacity-0'}`} />
           <div className="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/40"></div> {/* extra darkening for readability */}
         </div>
