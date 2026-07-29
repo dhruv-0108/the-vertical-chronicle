@@ -26,10 +26,10 @@ const Index = () => {
       <div className="relative min-h-screen flex flex-col overflow-hidden text-white selection:bg-white selection:text-black">
         {/* Background Image Slideshow for Top Section */}
         <div className="absolute inset-0 z-0 bg-[#111]">
-          <img src="/images/20260727_223746.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-[center_45%] scale-[1.15] grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
-          <img src="/images/2.jpg" alt="Dhruv Background 2" className={`absolute inset-0 w-full h-full object-cover object-[center_45%] scale-[1.15] grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`} />
-          <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-black/20"></div> {/* extra darkening for readability */}
+          <img src="/images/20260727_223746.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-[65%_45%] scale-[1.15] grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
+          <img src="/images/2.jpg" alt="Dhruv Background 2" className={`absolute inset-0 w-full h-full object-cover object-[65%_45%] scale-[1.15] grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`} />
+          <div className="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-black/40"></div> {/* extra darkening for readability */}
         </div>
 
         {/* Navbar and Hero Content wrapped in relative z-10 */}
