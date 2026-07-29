@@ -22,15 +22,16 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-[#111] text-[#D1D1CB] font-sans selection:bg-white selection:text-black">
-      {/* Top Section with Background Image */}
-      <div className="relative min-h-screen flex flex-col overflow-hidden text-white selection:bg-white selection:text-black">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-[#111]">
-          <img src="/images/1.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
-          <img src="/images/2.jpg" alt="Dhruv Background 2" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`} />
-          <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-black/20"></div> {/* extra darkening for readability */}
-        </div>
+      {/* Fixed Background Image Slideshow for entire website */}
+      <div className="fixed inset-0 z-0 bg-[#111]">
+        <img src="/images/1.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
+        <img src="/images/2.jpg" alt="Dhruv Background 2" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`} />
+        <div className="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-black/50"></div> {/* extra darkening for overall readability */}
+      </div>
+
+      {/* Top Section */}
+      <div className="relative min-h-screen flex flex-col text-white selection:bg-white selection:text-black">
 
         {/* Navbar and Hero Content wrapped in relative z-10 */}
         <div className="relative z-10 flex flex-col flex-1">
@@ -86,7 +87,7 @@ const Index = () => {
       </div>
 
       {/* Professional Experience Timeline */}
-      <section className="px-6 md:px-12 text-white">
+      <section className="relative z-10 px-6 md:px-12 text-white">
         <div className="py-8 md:py-12 w-full max-w-4xl mx-auto">
           <div className="mb-12 flex flex-col md:flex-row md:justify-between items-start md:items-end gap-4 text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-white">Experience</h2>
@@ -139,7 +140,7 @@ const Index = () => {
       </section>
 
       {/* Projects List */}
-      <section className="px-6 md:px-12 text-white">
+      <section className="relative z-10 px-6 md:px-12 text-white">
         <div className="py-8 md:py-12 w-full max-w-4xl mx-auto">
           <div className="mb-8 flex flex-col md:flex-row md:justify-between items-start md:items-end gap-4 text-left">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight text-white">Selected Projects</h2>
@@ -193,7 +194,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="w-full px-6 md:px-12 bg-transparent border-t-[3px] border-white/20">
+      <footer className="relative z-10 w-full px-6 md:px-12 bg-transparent border-t-[3px] border-white/20">
         <div className="py-12 md:py-16 w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-4 text-[#D1D1CB] text-sm font-semibold tracking-widest">
           <div className="flex flex-col items-start gap-6 md:gap-8">
             <div className="text-xl font-bold tracking-tighter">Dhruv Varachhiya</div>
