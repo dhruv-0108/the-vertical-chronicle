@@ -1,27 +1,33 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import InteractiveGradient from "../components/InteractiveGradient";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
+  const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const slideshowTimer = setInterval(() => {
+      setCurrentImage((prev) => (prev === 0 ? 1 : 0));
+    }, 5000);
+    return () => clearInterval(slideshowTimer);
+  }, []);
+
   const timeString = time.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour12: true });
 
   return (
-    <div className="relative min-h-screen bg-transparent text-black font-sans selection:bg-black selection:text-white">
-      <InteractiveGradient />
-
+    <div className="relative min-h-screen bg-[#111] text-[#D1D1CB] font-sans selection:bg-white selection:text-black">
       {/* Top Section with Background Image */}
       <div className="relative min-h-screen flex flex-col overflow-hidden text-white selection:bg-white selection:text-black">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img src="/images/1.jpg" alt="Dhruv Background" className="w-full h-full object-cover grayscale" />
+        <div className="absolute inset-0 z-0 bg-[#111]">
+          <img src="/images/1.jpg" alt="Dhruv Background 1" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`} />
+          <img src="/images/2.jpg" alt="Dhruv Background 2" className={`absolute inset-0 w-full h-full object-cover object-top grayscale transition-opacity duration-1000 ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`} />
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-black/20"></div> {/* extra darkening for readability */}
         </div>
@@ -80,16 +86,16 @@ const Index = () => {
       </div>
 
       {/* Professional Experience Timeline */}
-      <section className="px-6 md:px-12">
+      <section className="px-6 md:px-12 text-white">
         <div className="py-8 md:py-12 w-full max-w-4xl mx-auto">
           <div className="mb-12 flex flex-col md:flex-row md:justify-between items-start md:items-end gap-4 text-left">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">Experience</h2>
-            <span className="text-xs font-semibold text-black/50 tracking-widest pb-1 md:pb-2">⧗ 1+ Years Experience</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-white">Experience</h2>
+            <span className="text-xs font-semibold text-white/50 tracking-widest pb-1 md:pb-2">⧗ 1+ Years Experience</span>
           </div>
 
           <div className="relative flex flex-col md:flex-row gap-12 md:gap-8 mt-8">
             {/* Desktop continuous horizontal line */}
-            <div className="absolute left-0 right-0 top-[9px] h-[3px] bg-black/30 hidden md:block z-0"></div>
+            <div className="absolute left-0 right-0 top-[9px] h-[3px] bg-white/20 hidden md:block z-0"></div>
 
             {[
               {
@@ -114,17 +120,17 @@ const Index = () => {
               <div key={idx} className="flex-1 relative pl-10 md:pl-0 md:pt-16 group">
                 {/* Mobile vertical line for each item (except last) */}
                 {idx !== arr.length - 1 && (
-                  <div className="absolute left-[9px] top-2 bottom-[-3rem] w-[3px] bg-black/30 md:hidden z-0"></div>
+                  <div className="absolute left-[9px] top-2 bottom-[-3rem] w-[3px] bg-white/20 md:hidden z-0"></div>
                 )}
 
                 {/* Node */}
-                <div className="absolute left-0 top-[2px] md:top-0 w-5 h-5 rounded-full bg-[#D1D1CB] border-[3px] border-black z-10 group-hover:scale-150 group-hover:bg-black transition-all duration-300 md:left-0"></div>
+                <div className="absolute left-0 top-[2px] md:top-0 w-5 h-5 rounded-full bg-[#111] border-[3px] border-white z-10 group-hover:scale-150 group-hover:bg-white transition-all duration-300 md:left-0"></div>
 
-                <div className="mix-blend-color-burn pt-1 md:pt-0">
-                  <p className="text-xs md:text-sm font-semibold tracking-widest mb-2 text-black/50">{exp.period}</p>
-                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold tracking-tighter mb-1 leading-tight whitespace-normal">{exp.role}</h3>
-                  <h4 className="text-sm md:text-base font-semibold text-black/70 mb-3 whitespace-normal">{exp.company}</h4>
-                  <p className="text-sm md:text-base font-normal text-black/60 leading-relaxed max-w-sm">{exp.desc}</p>
+                <div className="pt-1 md:pt-0">
+                  <p className="text-xs md:text-sm font-semibold tracking-widest mb-2 text-white/50">{exp.period}</p>
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold tracking-tighter mb-1 leading-tight whitespace-normal text-white">{exp.role}</h3>
+                  <h4 className="text-sm md:text-base font-semibold text-white/80 mb-3 whitespace-normal">{exp.company}</h4>
+                  <p className="text-sm md:text-base font-normal text-white/70 leading-relaxed max-w-sm">{exp.desc}</p>
                 </div>
               </div>
             ))}
@@ -133,15 +139,15 @@ const Index = () => {
       </section>
 
       {/* Projects List */}
-      <section className="px-6 md:px-12">
+      <section className="px-6 md:px-12 text-white">
         <div className="py-8 md:py-12 w-full max-w-4xl mx-auto">
           <div className="mb-8 flex flex-col md:flex-row md:justify-between items-start md:items-end gap-4 text-left">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight">Selected Projects</h2>
-            <span className="text-xs font-semibold text-black/50 tracking-widest pb-1 md:pb-2">⧗ Impact & Design</span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight text-white">Selected Projects</h2>
+            <span className="text-xs font-semibold text-white/50 tracking-widest pb-1 md:pb-2">⧗ Impact & Design</span>
           </div>
         </div>
 
-        <div className="border-t-[3px] border-black group/list flex flex-col items-center">
+        <div className="border-t-[3px] border-white/20 group/list flex flex-col items-center">
           <ProjectRow
             title="Creator Match"
             subtitle="Brand Collaboration Platform"
@@ -187,7 +193,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="w-full px-6 md:px-12 bg-black border-t-[3px] border-black">
+      <footer className="w-full px-6 md:px-12 bg-transparent border-t-[3px] border-white/20">
         <div className="py-12 md:py-16 w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-4 text-[#D1D1CB] text-sm font-semibold tracking-widest">
           <div className="flex flex-col items-start gap-6 md:gap-8">
             <div className="text-xl font-bold tracking-tighter">Dhruv Varachhiya</div>
@@ -211,25 +217,25 @@ const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => {
   const props = isExternal ? { href: link, target: "_blank", rel: "noopener noreferrer" } : { to: link };
 
   return (
-    <Component {...props as any} className="block border-b-[3px] border-black w-full px-6 md:px-12 group/row hover:bg-black transition-all duration-500 relative overflow-hidden group-hover/list:opacity-30 hover:!opacity-100 flex flex-col items-center">
-      <div className="py-8 md:py-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-12 mix-blend-color-burn group-hover/row:mix-blend-normal transition-all duration-500 w-full max-w-4xl">
+    <Component {...props as any} className="block border-b-[3px] border-white/20 w-full px-6 md:px-12 group/row hover:bg-white/5 transition-all duration-500 relative overflow-hidden group-hover/list:opacity-30 hover:!opacity-100 flex flex-col items-center">
+      <div className="py-8 md:py-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-12 transition-all duration-500 w-full max-w-4xl">
 
         {/* Title section */}
         <div className="flex-1 transition-transform duration-500 ease-out group-hover/row:translate-x-4">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter mb-2 leading-tight text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">{title}</h3>
-          <p className="text-lg md:text-xl font-bold text-black/70 group-hover/row:text-[#D1D1CB]/70 transition-colors duration-500">{subtitle}</p>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter mb-2 leading-tight text-white transition-colors duration-500">{title}</h3>
+          <p className="text-lg md:text-xl font-bold text-white/70 group-hover/row:text-white transition-colors duration-500">{subtitle}</p>
         </div>
 
         {/* Why, What, How Section */}
-        <div className="flex-1 max-w-lg lg:ml-auto text-base md:text-lg font-medium space-y-4 text-black/80 group-hover/row:text-[#D1D1CB]/80 transition-colors duration-500">
-          <p className="transition-transform duration-500 delay-[50ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">Why:</strong>{why}</p>
-          <p className="transition-transform duration-500 delay-[100ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">What:</strong>{what}</p>
-          <p className="transition-transform duration-500 delay-[150ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-black group-hover/row:text-[#D1D1CB] transition-colors duration-500">How:</strong>{how}</p>
+        <div className="flex-1 max-w-lg lg:ml-auto text-base md:text-lg font-medium space-y-4 text-white/80 group-hover/row:text-white transition-colors duration-500">
+          <p className="transition-transform duration-500 delay-[50ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-white transition-colors duration-500">Why:</strong>{why}</p>
+          <p className="transition-transform duration-500 delay-[100ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-white transition-colors duration-500">What:</strong>{what}</p>
+          <p className="transition-transform duration-500 delay-[150ms] group-hover/row:translate-x-2"><strong className="font-black tracking-widest text-sm mr-3 text-white transition-colors duration-500">How:</strong>{how}</p>
         </div>
 
         {/* Arrow */}
-        <div className="hidden lg:flex items-center justify-center w-16 h-16 rounded-full border-[3px] border-black group-hover/row:border-[#D1D1CB] group-hover/row:bg-[#D1D1CB] group-hover/row:text-black group-hover/row:scale-[1.15] group-hover/row:rotate-45 transition-all duration-500 ease-out">
-          <ArrowUpRight className="w-8 h-8" />
+        <div className="hidden lg:flex items-center justify-center w-16 h-16 rounded-full border-[3px] border-white/40 group-hover/row:border-white group-hover/row:bg-white group-hover/row:text-black group-hover/row:scale-[1.15] group-hover/row:rotate-45 transition-all duration-500 ease-out">
+          <ArrowUpRight className="w-8 h-8 text-white group-hover/row:text-black" />
         </div>
       </div>
     </Component>
