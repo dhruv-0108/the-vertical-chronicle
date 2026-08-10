@@ -141,15 +141,13 @@ const Index = () => {
         <ClientProject
           title="Astro-Engine"
           link="https://astro-engine-nine.vercel.app/"
-          image="/images/astro-preview.png"
-          color="bg-purple-900/95 backdrop-blur-md"
+          color="bg-[#1e1b4b]/95 backdrop-blur-md border-l-[3px] border-[#6366f1]/50"
           why="Traditional astrology tools are paywalled or lack classical algorithmic rigor for real-world life decisions. This was built to provide an open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping and relocation flight paths based on Parashari principles."
         />
         <ClientProject
           title="Kasht Nivaran"
           link="https://kasht-nivaran.vercel.app/"
-          image="/images/kasht-preview.png"
-          color="bg-orange-800/95 backdrop-blur-md"
+          color="bg-[#7c2d12]/95 backdrop-blur-md border-l-[3px] border-[#ea580c]/50"
           why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan. This is a clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally, featuring a custom light/fast translation layer in Gujarati, Hindi, and English."
         />
       </section>
@@ -242,11 +240,11 @@ const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => {
   );
 };
 
-const ClientProject = ({ title, link, image, why, color }: any) => {
+const ClientProject = ({ title, link, why, color }: any) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer">
-      <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700"></div>
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
+      <iframe src={link} title={title} className="absolute inset-0 w-full h-full border-none pointer-events-none transition-transform duration-1000 group-hover:scale-[1.02] origin-center bg-white" />
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700"></div>
       
       {/* Title always visible on bottom left */}
       <div className="absolute bottom-10 left-6 md:bottom-16 md:left-16 z-10 transition-transform duration-700 group-hover:translate-x-4">
