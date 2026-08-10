@@ -139,10 +139,10 @@ const Index = () => {
       {/* Client Projects */}
       <section id="clients" className="relative z-10 w-full flex flex-col">
         <ClientProject
-          title="Astro-Engine"
-          link="https://astro-engine-nine.vercel.app/"
+          title="AstroSeva"
+          link="https://astroseva.vercel.app/"
           color="bg-[#1e1b4b]/95 backdrop-blur-md border-l-[3px] border-[#6366f1]/50"
-          why="Traditional astrology tools are paywalled or lack classical algorithmic rigor for real-world life decisions. This was built to provide an open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping and relocation flight paths based on Parashari principles."
+          why="[Please provide the description for AstroSeva here!]"
         />
         <ClientProject
           title="Kasht Nivaran"
@@ -178,6 +178,14 @@ const Index = () => {
             why="Bike maintenance is overly technical for beginners."
             what="A mobile layout simplifying DIY repairs step-by-step."
             how="System design thinking and clear user journeys."
+          />
+          <ProjectRow
+            title="Astro-Engine"
+            subtitle="Vedic Intelligence & Relocation Atlas"
+            link="https://astro-engine-nine.vercel.app/"
+            why="Traditional astrology tools are paywalled, commercialized, or lack classical algorithmic rigor for real-world life decisions."
+            what="An open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping, astro-atlas relocation flight paths, and 4-quadrant career alignment."
+            how="Built on classical Parashari & Jaimini principles, Shadbala strengths, interactive vector heatmaps, and zero-monetization open access."
           />
           <ProjectRow
             title="Sadhana Mandala"
