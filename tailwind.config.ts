@@ -107,6 +107,11 @@ export default {
           "0%, 100%": { boxShadow: "0 0 30px hsl(var(--primary)), 0 0 60px hsl(var(--primary) / 0.5)" },
           "50%": { boxShadow: "0 0 60px hsl(var(--primary)), 0 0 120px hsl(var(--primary) / 0.5)" },
         },
+        "autoscroll": {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-66.66%)" },
+          "100%": { transform: "translateY(0)" },
+        },
         "rotate-slow": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
@@ -123,6 +128,7 @@ export default {
         "slide-in-up": "slide-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "rotate-slow": "rotate-slow 20s linear infinite",
+        "autoscroll": "autoscroll 30s ease-in-out infinite",
       },
     },
   },
