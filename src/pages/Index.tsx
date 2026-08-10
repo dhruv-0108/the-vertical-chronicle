@@ -45,8 +45,7 @@ const Index = () => {
                 </div>
                 <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-semibold text-white/60">
                   <Link to="/case-studies" className="hover:opacity-60 hover:text-white transition">Case Studies</Link>
-                  <Link to="/product-teardowns" className="hover:opacity-60 hover:text-white transition">Product Teardowns</Link>
-                  <Link to="/learning" className="hover:opacity-60 hover:text-white transition">Learning</Link>
+                  <a href="#clients" className="hover:opacity-60 hover:text-white transition">Client Projects</a>
                   <Link to="/photography" className="hover:opacity-60 hover:text-white transition">Photography</Link>
                 </div>
               </div>
@@ -137,6 +136,23 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* Client Projects */}
+      <section id="clients" className="relative z-10 w-full flex flex-col">
+        <ClientProject
+          title="Astro-Engine"
+          link="https://astro-engine-nine.vercel.app/"
+          image="/images/astro-preview.png"
+          color="bg-purple-900/95 backdrop-blur-md"
+          why="Traditional astrology tools are paywalled or lack classical algorithmic rigor for real-world life decisions. This was built to provide an open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping and relocation flight paths based on Parashari principles."
+        />
+        <ClientProject
+          title="Kasht Nivaran"
+          link="https://kasht-nivaran.vercel.app/"
+          image="/images/kasht-preview.png"
+          color="bg-orange-800/95 backdrop-blur-md"
+          why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan. This is a clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally, featuring a custom light/fast translation layer in Gujarati, Hindi, and English."
+        />
+      </section>
 
       {/* Projects List */}
       <section className="relative z-10 px-6 md:px-12 text-white">
@@ -166,28 +182,12 @@ const Index = () => {
             how="System design thinking and clear user journeys."
           />
           <ProjectRow
-            title="Astro-Engine"
-            subtitle="Vedic Intelligence & Relocation Atlas"
-            link="https://astro-engine-nine.vercel.app/"
-            why="Traditional astrology tools are paywalled, commercialized, or lack classical algorithmic rigor for real-world life decisions."
-            what="An open-access Vedic intelligence engine featuring Vimshottari Dasha trajectory mapping, astro-atlas relocation flight paths, and 4-quadrant career alignment."
-            how="Built on classical Parashari & Jaimini principles, Shadbala strengths, interactive vector heatmaps, and zero-monetization open access."
-          />
-          <ProjectRow
             title="Sadhana Mandala"
             subtitle="Spiritual Journal & Vows Tracker"
             link="https://journal-rose-phi.vercel.app/"
             why="Practitioners lack dedicated tools to track daily rituals and vow timelines."
             what="A minimalist editorial-style diary to track daily sadhana and resolve commitment vows."
             how="React, TypeScript, Tailwind CSS, and Firebase Auth + Firestore for cloud sync."
-          />
-          <ProjectRow
-            title="Kasht Nivaran"
-            subtitle="Reviving Temple's Digital Presence"
-            link="https://kasht-nivaran.vercel.app/"
-            why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan."
-            what="A clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally."
-            how="React, TypeScript, and a custom light/fast translation layer in Gujarati, Hindi, and English."
           />
         </div>
       </section>
@@ -239,6 +239,31 @@ const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => {
         </div>
       </div>
     </Component>
+  );
+};
+
+const ClientProject = ({ title, link, image, why, color }: any) => {
+  return (
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer">
+      <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700"></div>
+      
+      {/* Title always visible on bottom left */}
+      <div className="absolute bottom-10 left-6 md:bottom-16 md:left-16 z-10 transition-transform duration-700 group-hover:translate-x-4">
+        <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter drop-shadow-2xl">{title}</h3>
+      </div>
+
+      {/* Fade-in About Section on the right */}
+      <div className={`absolute top-0 right-0 bottom-0 w-full md:w-1/3 lg:w-1/4 ${color} p-8 md:p-12 flex flex-col justify-center translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-20 shadow-2xl`}>
+        <h4 className="text-2xl font-bold text-white mb-6 tracking-tight">About the Project</h4>
+        <p className="text-white/90 text-base md:text-lg font-medium leading-relaxed">
+          {why}
+        </p>
+        <div className="mt-12 flex items-center gap-2 text-white font-bold tracking-widest text-sm uppercase group/btn">
+          View Live Site <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:scale-110" />
+        </div>
+      </div>
+    </a>
   );
 };
 
