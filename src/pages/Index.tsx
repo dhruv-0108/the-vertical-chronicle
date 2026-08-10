@@ -140,9 +140,9 @@ const Index = () => {
       <section id="clients" className="relative z-10 w-full flex flex-col">
         <ClientProject
           title="AstroSeva"
-          link="https://astroseva.vercel.app/"
+          link="https://astro-seva-mocha.vercel.app/"
           color="bg-[#1e1b4b]/95 backdrop-blur-md border-l-[3px] border-[#6366f1]/50"
-          why="[Please provide the description for AstroSeva here!]"
+          why="Built for a 72-year-old astrologer who needed a streamlined platform for simple kundli generation and secure payment integration to monetize services he was previously offering for free."
         />
         <ClientProject
           title="Kasht Nivaran"
