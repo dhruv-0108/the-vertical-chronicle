@@ -251,8 +251,10 @@ const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => {
 const ClientProject = ({ title, link, why, color }: any) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
-      <iframe src={link} title={title} className="absolute top-0 left-0 w-full h-[300%] border-none pointer-events-none animate-autoscroll group-hover:scale-[1.02] origin-top bg-white transition-transform duration-1000" />
-      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700"></div>
+      <div className="absolute top-0 left-0 w-full h-[300%] pointer-events-none animate-autoscroll origin-top">
+        <iframe src={link} title={title} className="w-full h-full border-none bg-white transition-transform duration-1000 group-hover:scale-[1.03] origin-top" />
+      </div>
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700 pointer-events-none"></div>
       
       {/* Title always visible on bottom left */}
       <div className="absolute bottom-10 left-6 md:bottom-16 md:left-16 z-10 transition-transform duration-700 group-hover:translate-x-4">
