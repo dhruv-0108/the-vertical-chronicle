@@ -36,6 +36,7 @@ const App = () => (
             <Route path="/aquasonic-case-study" element={<AquaSonicCaseStudy />} />
             <Route path="/creatormatch-case-study" element={<CreatorMatchCaseStudy />} />
             <Route path="/kasht-nivaran-case-study" element={<KashtNivaranCaseStudy />} />
+            <Route path="/astroseva-case-study" element={<ComingSoon />} />
             
             {/* Placeholder routes for new sections */}
             <Route path="/case-studies" element={<ComingSoon />} />

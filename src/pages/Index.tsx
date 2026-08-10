@@ -140,13 +140,15 @@ const Index = () => {
       <section id="clients" className="relative z-10 w-full flex flex-col">
         <ClientProject
           title="AstroSeva"
-          link="https://astro-seva-mocha.vercel.app/"
+          link="/astroseva-case-study"
+          image="/images/astroseva-preview.png"
           color="bg-[#1e1b4b]/95 backdrop-blur-md border-l-[3px] border-[#6366f1]/50"
           why="Built for a 72-year-old astrologer who needed a streamlined platform for simple kundli generation and secure payment integration to monetize services he was previously offering for free."
         />
         <ClientProject
           title="Kasht Nivaran"
-          link="https://kasht-nivaran.vercel.app/"
+          link="/kasht-nivaran-case-study"
+          image="/images/kasht-preview.png"
           color="bg-[#7c2d12]/95 backdrop-blur-md border-l-[3px] border-[#ea580c]/50"
           why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan. This is a clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally, featuring a custom light/fast translation layer in Gujarati, Hindi, and English."
         />
@@ -248,13 +250,12 @@ const ProjectRow = ({ title, subtitle, link, why, what, how }: any) => {
   );
 };
 
-const ClientProject = ({ title, link, why, color }: any) => {
+const ClientProject = ({ title, link, image, why, color }: any) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
-      <div className="absolute top-0 left-0 w-full h-[300%] pointer-events-none animate-autoscroll origin-top">
-        <iframe src={link} title={title} className="w-full h-full border-none bg-white transition-transform duration-1000 group-hover:scale-[1.03] origin-top" />
-      </div>
-      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700 pointer-events-none"></div>
+    <Link to={link} className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
+      {/* Static Image Preview */}
+      <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03] opacity-50 group-hover:opacity-90" />
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none"></div>
       
       {/* Title always visible on bottom left */}
       <div className="absolute bottom-10 left-6 md:bottom-16 md:left-16 z-10 transition-transform duration-700 group-hover:translate-x-4">
@@ -268,10 +269,10 @@ const ClientProject = ({ title, link, why, color }: any) => {
           {why}
         </p>
         <div className="mt-12 flex items-center gap-2 text-white font-bold tracking-widest text-sm uppercase group/btn">
-          View Live Site <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:scale-110" />
+          View Case Study <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:scale-110" />
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
