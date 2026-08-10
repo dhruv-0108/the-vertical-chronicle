@@ -128,7 +128,7 @@ export default {
         "slide-in-up": "slide-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "rotate-slow": "rotate-slow 20s linear infinite",
-        "autoscroll": "autoscroll 30s ease-in-out infinite",
+        "autoscroll": "autoscroll 120s ease-in-out infinite",
       },
     },
   },
