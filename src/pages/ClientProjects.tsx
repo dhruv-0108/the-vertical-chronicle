@@ -29,13 +29,16 @@ const ClientProject = ({ title, link, image, why, color }: any) => {
 
 const ClientProjects = () => {
   return (
-    <main className="relative min-h-screen w-full bg-black text-white selection:bg-white selection:text-black">
-      <nav className="fixed top-4 right-4 left-4 md:left-auto md:right-4 z-50 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 shadow-sm flex justify-between md:justify-start gap-4 text-sm font-medium uppercase tracking-widest">
-        <Link to="/" className="text-white/50 hover:text-white transition">Portfolio</Link>
-        <span className="text-white">Client Projects</span>
-      </nav>
+    <main className="relative min-h-screen w-full bg-black text-white selection:bg-white selection:text-black flex flex-col">
+      <div className="w-full flex justify-center py-12 md:py-16">
+        <nav className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 shadow-sm flex justify-center gap-4 text-sm font-medium uppercase tracking-widest rounded-sm">
+          <Link to="/" className="text-white/50 hover:text-white transition">Portfolio</Link>
+          <span className="text-white/30">/</span>
+          <span className="text-white">Client Projects</span>
+        </nav>
+      </div>
       
-      <section className="w-full h-full min-h-screen flex flex-col lg:pt-0">
+      <section className="w-full flex flex-col">
         <ClientProject
           title="AstroSeva"
           link="/astroseva-case-study"
