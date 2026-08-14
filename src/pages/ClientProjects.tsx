@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const ClientProject = ({ title, link, image, why, color }: any) => {
   return (
-    <Link to={link} className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
       {/* Static Image Preview */}
       <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03] opacity-50 group-hover:opacity-90" />
       <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none"></div>
@@ -20,10 +20,10 @@ const ClientProject = ({ title, link, image, why, color }: any) => {
           {why}
         </p>
         <div className="mt-12 flex items-center gap-2 text-white font-bold tracking-widest text-sm uppercase group/btn">
-          View Case Study <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:scale-110" />
+          View Live Site <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:scale-110" />
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 
@@ -41,15 +41,15 @@ const ClientProjects = () => {
       <section className="w-full flex flex-col">
         <ClientProject
           title="AstroSeva"
-          link="/astroseva-case-study"
-          image="/images/astroseva-preview.png"
+          link="https://astro-seva-mocha.vercel.app/"
+          image="/images/Astro-seva000-pic.png"
           color="bg-[#1e1b4b]/95 backdrop-blur-md border-l-[3px] border-[#6366f1]/50"
           why="Built for a 72-year-old astrologer who needed a streamlined platform for simple kundli generation and secure payment integration to monetize services he was previously offering for free."
         />
         <ClientProject
           title="Kasht Nivaran"
-          link="/kasht-nivaran-case-study"
-          image="/images/kasht-preview.png"
+          link="https://kasht-nivaran.vercel.app/"
+          image="/images/Kashtnivaran-pic.png"
           color="bg-[#7c2d12]/95 backdrop-blur-md border-l-[3px] border-[#ea580c]/50"
           why="Small village temples lack a digital touchpoint for remote devotees to receive daily darshan. This is a clean, high-performance web app bringing daily darshan and Hanumanji's 12 names to worshippers globally, featuring a custom light/fast translation layer in Gujarati, Hindi, and English."
         />
