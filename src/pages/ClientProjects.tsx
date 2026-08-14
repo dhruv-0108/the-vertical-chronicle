@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
-const ClientProject = ({ title, link, image, why, color }: any) => {
+const ClientProject = ({ title, link, image, why, color, objectPosition = "object-center" }: any) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" className="block relative w-full h-[60vh] md:h-[80vh] group overflow-hidden cursor-pointer bg-[#111]">
       {/* Static Image Preview */}
-      <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03] opacity-50 group-hover:opacity-90" />
+      <img src={image} alt={title} className={`absolute inset-0 w-full h-full object-cover ${objectPosition} transition-transform duration-1000 group-hover:scale-[1.03] opacity-50 group-hover:opacity-90`} />
       <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none"></div>
       
       {/* Title always visible on bottom left */}
@@ -43,6 +43,7 @@ const ClientProjects = () => {
           title="AstroSeva"
           link="https://astro-seva-mocha.vercel.app/"
           image="/images/Astro-seva000-pic.png"
+          objectPosition="object-top"
           color="bg-[#1e1b4b]/95 backdrop-blur-md border-l-[3px] border-[#6366f1]/50"
           why="Built for a 72-year-old astrologer who needed a streamlined platform for simple kundli generation and secure payment integration to monetize services he was previously offering for free."
         />
