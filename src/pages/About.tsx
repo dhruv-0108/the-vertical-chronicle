@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Briefcase, Heart, Download } from "lucide-react";
+import { Briefcase, Heart } from "lucide-react";
 
 const About = () => {
   return (
@@ -53,14 +53,6 @@ const About = () => {
               <p>
                 Whether I'm mapping out BPMN process flows or building a real-time downtime dashboard, my goal is always to deliver scalable, efficient solutions that make business sense.
               </p>
-              <a 
-                href="/Dhruv_Varachhiya_Resume.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 text-white hover:text-white/70 transition font-bold tracking-wide border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-black w-max"
-              >
-                <Download className="w-4 h-4" /> Download Resume
-              </a>
             </div>
           </div>
 
