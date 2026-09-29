@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import CV from "./pages/CV";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import MotofixCaseStudy from "./pages/MotofixCaseStudy";
 import MotofixDemo from "./pages/MotofixDemo";
@@ -31,7 +31,7 @@ const App = () => (
         <SmoothScrollWrapper>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/cv" element={<CV />} />
+            <Route path="/about" element={<About />} />
             <Route path="/motofix-case-study" element={<MotofixCaseStudy />} />
             <Route path="/motofix-demo" element={<MotofixDemo />} />
             <Route path="/aquasonic-case-study" element={<AquaSonicCaseStudy />} />

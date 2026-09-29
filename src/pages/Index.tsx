@@ -41,7 +41,7 @@ const Index = () => {
                 <div className="flex justify-between items-center w-full md:w-auto">
                   <Link to="/" className="hover:opacity-60 transition font-bold text-lg tracking-widest text-white">Dhruv</Link>
                   {/* CV link for mobile on top right */}
-                  <Link to="/cv" className="hover:opacity-60 transition md:hidden font-semibold text-white">CV</Link>
+                  <Link to="/about" className="hover:opacity-60 transition md:hidden font-semibold text-white">About</Link>
                 </div>
                 <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-semibold text-white/60">
                   <Link to="/case-studies" className="hover:opacity-60 hover:text-white transition">Case Studies</Link>
@@ -51,7 +51,7 @@ const Index = () => {
               </div>
               <div className="hidden md:flex gap-6 lg:gap-8 items-center font-semibold text-white/60">
                 <Link to="/" className="hover:opacity-60 hover:text-white transition">Work</Link>
-                <Link to="/cv" className="hover:opacity-60 hover:text-white transition">CV</Link>
+                <Link to="/about" className="hover:opacity-60 hover:text-white transition">About</Link>
               </div>
             </div>
           </nav>
