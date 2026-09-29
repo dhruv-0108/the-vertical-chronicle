@@ -1,11 +1,27 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { User, Briefcase, Heart, Download } from "lucide-react";
+import { Briefcase, Heart, Download } from "lucide-react";
+
+const images = [
+  "/images/about/about-1.png",
+  "/images/about/about-2.png",
+  "/images/about/about-3.png"
+];
 
 const About = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans flex flex-col">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full border-b-[3px] border-white/20 bg-black/80 backdrop-blur-xl">
+      <nav className="fixed top-0 z-50 w-full border-b-[3px] border-white/10 bg-black/50 backdrop-blur-xl">
         <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-4 md:py-6 flex justify-between items-center">
           <Link to="/" className="font-bold text-lg tracking-widest text-white hover:opacity-60 transition">
             Dhruv
@@ -17,47 +33,36 @@ const About = () => {
         </div>
       </nav>
 
+      {/* Hero Section with Background Slider */}
+      <header className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-start overflow-hidden pt-20">
+        {images.map((img, idx) => (
+          <img
+            key={img}
+            src={img}
+            alt={`About Background ${idx + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              idx === currentImageIndex ? "opacity-40" : "opacity-0"
+            }`}
+          />
+        ))}
+        {/* Dark Gradient Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight mb-6">
+              I build bridges between <span className="text-white/50">business needs</span> and <span className="text-white/50">technical execution.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 font-medium leading-relaxed max-w-2xl">
+              I'm an IT Business Analyst and Developer who thrives at the intersection of product strategy, user experience, and systems architecture.
+            </p>
+          </div>
+        </div>
+      </header>
+
       {/* Main Content */}
       <main className="flex-1 w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-20 flex flex-col gap-16 md:gap-24">
-        
-        {/* Header Section */}
-        <section className="max-w-4xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight mb-8">
-            I build bridges between <span className="text-white/50">business needs</span> and <span className="text-white/50">technical execution.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/70 font-medium leading-relaxed">
-            I'm an IT Business Analyst and Developer who thrives at the intersection of product strategy, user experience, and systems architecture.
-          </p>
-        </section>
-
-        {/* Images Section (Matching Homepage Style) */}
-        <section className="w-full flex flex-col md:flex-row gap-4 h-[50vh] md:h-[60vh] lg:h-[70vh]">
-          {/* Main large image */}
-          <div className="flex-[2] w-full h-full relative group overflow-hidden">
-            <img 
-              src="/images/about/about-1.png" 
-              alt="Dhruv" 
-              className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700" 
-            />
-          </div>
-          {/* Two smaller images column */}
-          <div className="hidden md:flex flex-col gap-4 flex-1 h-full">
-            <div className="flex-1 w-full relative group overflow-hidden">
-              <img 
-                src="/images/about/about-2.png" 
-                alt="Dhruv setup" 
-                className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 object-top" 
-              />
-            </div>
-            <div className="flex-1 w-full relative group overflow-hidden">
-              <img 
-                src="/images/about/about-3.png" 
-                alt="Dhruv outdoor" 
-                className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 object-top" 
-              />
-            </div>
-          </div>
-        </section>
 
         {/* Grid Layout for Sections */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
