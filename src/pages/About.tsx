@@ -1,23 +1,7 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Briefcase, Heart, Download } from "lucide-react";
 
-const images = [
-  "/images/about/about-1.png",
-  "/images/about/about-2.png",
-  "/images/about/about-3.png"
-];
-
 const About = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans flex flex-col">
       {/* Navigation */}
@@ -33,21 +17,8 @@ const About = () => {
         </div>
       </nav>
 
-      {/* Hero Section with Background Slider */}
-      <header className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-start overflow-hidden pt-20">
-        {images.map((img, idx) => (
-          <img
-            key={img}
-            src={img}
-            alt={`About Background ${idx + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out ${
-              idx === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-        {/* Dark Overlay for text readability (uniform, no solid black at bottom) */}
-        <div className="absolute inset-0 bg-black/60"></div>
-
+      {/* Hero Section */}
+      <header className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-start pt-20">
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight mb-6">
