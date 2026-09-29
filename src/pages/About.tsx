@@ -30,6 +30,19 @@ const About = () => {
           </p>
         </section>
 
+        {/* Images Section */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[400px]">
+          <div className="w-full h-[300px] md:h-full overflow-hidden rounded-xl bg-white/5">
+            <img src="/images/about/about-1.png" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Dhruv" />
+          </div>
+          <div className="w-full h-[300px] md:h-full overflow-hidden rounded-xl bg-white/5 hidden md:block">
+            <img src="/images/about/about-2.png" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Dhruv" />
+          </div>
+          <div className="w-full h-[300px] md:h-full overflow-hidden rounded-xl bg-white/5 hidden md:block">
+            <img src="/images/about/about-3.png" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 object-top" alt="Dhruv" />
+          </div>
+        </section>
+
         {/* Grid Layout for Sections */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           
