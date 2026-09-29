@@ -76,8 +76,8 @@ const Index = () => {
             </h1>
 
             <div className="space-y-3 text-lg md:text-xl font-medium text-white/70 tracking-tight w-full max-w-4xl text-left">
-              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Currently →</span> Business Analyst @ SSMInfotech</p>
-              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Previously →</span> PalmInfotech → Yash Metals</p>
+              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Currently →</span> IT Business Analyst @ Yash Metals</p>
+              <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Previously →</span> SDE Intern @ Yash Metals</p>
               <p><span className="text-white/40 font-bold tracking-wider text-xs md:text-sm mr-3 uppercase">Delivering →</span> Seamless Operations ☻</p>
             </div>
           </header>
@@ -89,7 +89,7 @@ const Index = () => {
         <div className="py-8 md:py-12 w-full max-w-4xl mx-auto">
           <div className="mb-12 flex flex-col md:flex-row md:justify-between items-start md:items-end gap-4 text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-white">Experience</h2>
-            <span className="text-xs font-semibold text-white/50 tracking-widest pb-1 md:pb-2">⧗ 1+ Years Experience</span>
+            <span className="text-xs font-semibold text-white/50 tracking-widest pb-1 md:pb-2">⧗ 1.5+ Years Experience</span>
           </div>
 
           <div className="relative flex flex-col md:flex-row gap-12 md:gap-8 mt-8">
@@ -99,20 +99,14 @@ const Index = () => {
             {[
               {
                 period: "Jan 2025 - Apr 2025",
-                role: "Software Engineer Intern",
+                role: "SDE Intern",
                 company: "Yash Metals",
                 desc: "Built a real-time equipment downtime monitoring dashboard and implemented SQL-backed workflows to evaluate efficiency."
               },
               {
-                period: "May 2025 - Sep 2025",
-                role: "Business Analyst",
-                company: "PalmInfotech",
-                desc: "Drafted 50+ user stories, use cases, and test cases. Managed a 5-member cross-functional team and applied AI to standardize flowchart documentation."
-              },
-              {
-                period: "Jan 2026 - Present",
-                role: "Business Analyst",
-                company: "SSMInfotech Solutions Pvt. Ltd.",
+                period: "May 2025 - Present",
+                role: "IT Business Analyst",
+                company: "Yash Metals",
                 desc: "Driving requirement analysis and process alignment for MES implementations. Leading documentation of API configuration workflows for SAP integration."
               }
             ].map((exp, idx, arr) => (

@@ -151,29 +151,18 @@ const CV = () => {
             >
               <ol className="space-y-3">
                 <ExpItem
-                  role="Business Analyst"
-                  org="SSMInfotech Solutions Pvt. Ltd."
-                  period="Jan 2026 — Present"
+                  role="IT Business Analyst"
+                  org="Yash Metals"
+                  period="May 2025 — Present"
                   points={[
-                    "Driving requirement analysis and process alignment for MES implementations across 2 manufacturing industries.",
-                    "Leading the documentation of API configuration workflows for direct SAP integration within the X-Force MES platform.",
-                    "Collaborating with a 4-member cross-functional team to convert plant operations and business requirements into functional MES configuration specifications.",
-                    "Standardizing BPMN-based process flow, equipment flow, and quality traceability models.",
-                  ]}
-                />
-                <ExpItem
-                  role="Business Analyst"
-                  org="PalmInfotech"
-                  period="May 2025 — Sep 2025"
-                  points={[
-                    "Drafted 50+ user stories, use cases, and test cases by mapping client workflows.",
-                    "Translated client requirements into actionable documentation, enabling alignment with internal teams.",
-                    "Managed a 5-member team of QA, developers, and designers, ensuring on-time delivery.",
+                    "Driving requirement analysis and process alignment for MES implementations across manufacturing operations.",
+                    "Leading the documentation of API configuration workflows and standardizing BPMN-based process flow models.",
+                    "Collaborating with a cross-functional team to convert plant operations into functional MES configuration specifications.",
                     "Applied AI prompt engineering with PlantUML to standardize flowchart documentation, saving 10 hours/week.",
                   ]}
                 />
                 <ExpItem
-                  role="Software Engineer Intern"
+                  role="SDE Intern"
                   org="Yash Metals"
                   period="Jan 2025 — Apr 2025"
                   points={[
@@ -191,9 +180,9 @@ const CV = () => {
               title="Snapshot"
             >
               <ul className="text-xs space-y-1.5 text-foreground/85 list-disc pl-4">
-                <li><strong>Impact at Scale:</strong> Managed requirements for LMEL & Emami MES implementations.</li>
+                <li><strong>Impact at Scale:</strong> Managed requirements for internal MES implementations and process alignments.</li>
                 <li><strong>Efficiency:</strong> Built real-time monitoring dashboards, reducing operational reporting time by 25%.</li>
-                <li><strong>Leadership:</strong> Managed a 5-member cross-functional team ensuring on-time delivery.</li>
+                <li><strong>Leadership:</strong> Managed cross-functional collaborations ensuring on-time delivery of technical specifications.</li>
                 <li><strong>Innovation:</strong> Saved 10 hours/week via AI-driven PlantUML flowchart engineering.</li>
               </ul>
             </Card>
