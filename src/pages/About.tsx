@@ -30,16 +30,32 @@ const About = () => {
           </p>
         </section>
 
-        {/* Images Section */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[400px]">
-          <div className="w-full h-[300px] md:h-full overflow-hidden rounded-xl bg-white/5">
-            <img src="/images/about/about-1.png" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Dhruv" />
+        {/* Images Section (Matching Homepage Style) */}
+        <section className="w-full flex flex-col md:flex-row gap-4 h-[50vh] md:h-[60vh] lg:h-[70vh]">
+          {/* Main large image */}
+          <div className="flex-[2] w-full h-full relative group overflow-hidden">
+            <img 
+              src="/images/about/about-1.png" 
+              alt="Dhruv" 
+              className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700" 
+            />
           </div>
-          <div className="w-full h-[300px] md:h-full overflow-hidden rounded-xl bg-white/5 hidden md:block">
-            <img src="/images/about/about-2.png" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Dhruv" />
-          </div>
-          <div className="w-full h-[300px] md:h-full overflow-hidden rounded-xl bg-white/5 hidden md:block">
-            <img src="/images/about/about-3.png" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 object-top" alt="Dhruv" />
+          {/* Two smaller images column */}
+          <div className="hidden md:flex flex-col gap-4 flex-1 h-full">
+            <div className="flex-1 w-full relative group overflow-hidden">
+              <img 
+                src="/images/about/about-2.png" 
+                alt="Dhruv setup" 
+                className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 object-top" 
+              />
+            </div>
+            <div className="flex-1 w-full relative group overflow-hidden">
+              <img 
+                src="/images/about/about-3.png" 
+                alt="Dhruv outdoor" 
+                className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 object-top" 
+              />
+            </div>
           </div>
         </section>
 
