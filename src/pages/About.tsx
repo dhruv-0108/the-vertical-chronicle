@@ -72,13 +72,13 @@ const About = () => {
             </div>
             <div className="space-y-6 text-white/70 font-medium leading-relaxed text-lg">
               <p>
-                When I'm not writing specs or coding, I'm deeply passionate about visual storytelling. 
+                Beyond my corporate work, I am deeply passionate about helping people connect with the internet and bridging the digital divide. I believe technology is a great equalizer, and I actively use my skills to bring traditional, offline communities into the digital world.
               </p>
               <p>
-                I have a dedicated photography practice where I focus on capturing candid moments, landscapes, and the subtle interplay of light and shadow. It helps me maintain a creative perspective that I bring back into my professional product design work.
+                For example, I helped a remote village temple establish its first digital footprint, allowing devotees to receive daily remote darshan globally. I also built a platform for a 72-year-old astrologer, empowering him to modernize his practice and safely monetize his services online after years of doing it for free.
               </p>
               <p>
-                I also enjoy tinkering with new web technologies, exploring the latest AI advancements, and finding small ways to automate my daily routines. I believe that maintaining a curious, creative life outside of work is the secret to building better products during work hours.
+                I am driven by strong personal ethics and a desire to give back to society. Whether it's through photography or writing code for local communities, my core value remains the same: using technology and creativity to make a meaningful, positive impact on people's lives.
               </p>
             </div>
           </div>
