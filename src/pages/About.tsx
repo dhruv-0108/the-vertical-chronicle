@@ -40,14 +40,13 @@ const About = () => {
             key={img}
             src={img}
             alt={`About Background ${idx + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-              idx === currentImageIndex ? "opacity-40" : "opacity-0"
+            className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out ${
+              idx === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
-        {/* Dark Gradient Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Dark Overlay for text readability (uniform, no solid black at bottom) */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="max-w-4xl">
